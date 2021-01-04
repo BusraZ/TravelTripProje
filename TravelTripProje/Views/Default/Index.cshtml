@@ -1,0 +1,70 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web3/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+  
+    <script src="~/web3/js/jquery.min.js"></script>
+    <script src="~/web3/js/responsiveslides.min.js"></script>
+
+    <script >
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+  
+
+        <div class="header_bottom_right_images">
+
+            <div class="slider" >
+                <ul class="rslides" id="slider1">
+                    @foreach (var x in Model)
+                    {
+                    <li><img src="@x.BlogImage" alt=""></li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+
+        <div class"content">
+            <link rel="stylesheet" href="~/web3/css/style.css" type="text/css" media="all" />
+            <div class="wrap">
+                <div class="wrapper">
+                    <div class="con-top">
+                        
+                        <h3>Tatil Seyahat Bloguma Hoşgeldiniz!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facil</p>
+                    </div>
+                    @Html.Action("Partial1","Default")
+                    <div class="grids">
+                        <div class="box1">
+                          @Html.Action("Partial3","Default")
+                          @Html.Action("Partial4","Default")
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = null;
+}
+
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    
+    <script type="text/javascript"></script>
+    <link href="~/web/style.css" rel="stylesheet" type="text/css"></link>
+    <link href="~/web/reset.css" rel="stylesheet" type="text/css"></link>
+    <script type="text/javascript" src="~/web/jquery.js"></script>
+    <script type="text/javascript" src="~/web/slider.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Patua+One" rel="stylesheet"></link>
+</h:head>
+<h:body>
+    <div id="site">
+        <div id="header">
+
+            <div id="site_adi">
+                <div id="logo">
+                    <img src="~/web/images/header/logo.jpg" style="margin-top: 30px;margin-left: 50px" />
+                </div>
+
+                <div id="menu">
+
+                    <div id="social_media">
+                        <a href=""><img src="~/web/images/header/facebook.png" alt="facebook_logo" /></a>
+                        <a href=""><img src="~/web/images/header/twitter.png" alt="twitter_logo" /></a>
+                        <a href=""><img src="~/web/images/header/inst.png" alt="instagram_logo" /></a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='/Default/Index/'>Anasayfa</a></li>
+                    
+                    <li class='has-sub'>
+                        <a href="/Blog/Index/">Blogum</a>
+                        
+                    </li>
+                    <li class='has-sub'><a href="/Default/About/">Hakkımızda</a></li>
+                    <li class='has-sub'>
+                        <a href="/Admin/Index/">Admin</a>
+
+                    </li>
+                    <li class='last'><a href="#">İletişim</a></li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div>
+            @RenderBody()
+        </div>
+        <div class="footer-bottom">
+            <div class="wrap">
+                <div class="copy">
+                    <p>&copy; 2020 Tatil Seyahat . Tüm hakları saklıdır| Design by <a href="#">Büşra Zurnacı</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</h:body>
+</html>
+
